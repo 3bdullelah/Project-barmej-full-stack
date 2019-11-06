@@ -1,0 +1,522 @@
+/*----------------------١-----------------------*/
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next
+أو إن لم تجده فيمكنك استعمال خط
+Lato
+*/
+/*---------------------------------------------*/
+@font-face {
+  font-family: "AvenirNext-Regular";
+  src: url("../fonts/AvenirNext-Regular.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Regular.woff)") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "AvenirNext-Bold";
+  src: url("../fonts/AvenirNext-Bold.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: bold;
+}
+@font-face {
+  font-family: "AvenirNext-DemiBold";
+  src: url("../fonts/AvenirNext-DemiBold.woff2") format("woff2"),
+    url("../fonts/AvenirNext-DemiBold.woff") format("woff");
+}
+@font-face {
+  font-family: "AvenirNext-Medium";
+  src: url("../fonts/AvenirNext-Medium.woff2") format("woff2"),
+    url("../fonts/AvenirNext-Medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+/*----------------------------------------------*/
+
+button {
+  color: transparent;
+  text-decoration: none;
+  display: none;
+  font-family: "AvenirNext-Regular", sans-serif;
+}
+a {
+  background-color: transparent;
+  font-family: "AvenirNext-Regular", sans-serif;
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+}
+h1 {
+  font-family: "AvenirNext-Bold", sans-serif;
+}
+h2 {
+  font-family: "AvenirNext-DemiBold", sans-serif;
+}
+h3,
+h4 {
+  font-family: "AvenirNext-Medium", sans-serif;
+}
+h5,
+p {
+  font-family: "AvenirNext-Regular", sans-serif;
+  color: #000000;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+footer a {
+  text-decoration: none;
+}
+span {
+  color: #9fa2b8;
+  font-family: "AvenirNext-Regular", sans-serif;
+  text-transform: uppercase;
+}
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+.button {
+  border-radius: 42px;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
+  font-size: 16px;
+  min-width: 220px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+.button.is-primary {
+  background-color: #3040c4;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.button.is-secondary {
+  background-color: #fff;
+  color: #3040c4;
+  border: 2px solid #3040c4;
+}
+.button.is-secondary:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  transition-duration: 0.3s;
+}
+.button.is-outline {
+  color: #fff;
+  border: 2px solid #fff;
+}
+.button.is-outline:hover {
+  background-color: #fff;
+  color: #3040c4;
+  border: 1px solid #3040c4;
+  transition-duration: 0.3s;
+}
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة           */
+/*----------------------------------------------*/
+/* .page {
+  padding: 32px 50px;
+} */
+.container {
+  padding: 20px 0;
+}
+.main {
+  background: #e5e5e5;
+}
+.hero {
+  background: #fff;
+}
+
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+.logo {
+  text-decoration: none;
+}
+header .container {
+  border-bottom: 1px solid #eef0fc;
+  /* min-width: 90%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.is-visible-mobile {
+  display: none;
+}
+.burger {
+  position: relative;
+  padding-left: 1.25em;
+  top: 18px;
+}
+.burger:before {
+  content: "";
+  position: absolute;
+  top: 0.25em;
+  left: 0;
+  width: 1em;
+  height: 0.125em;
+  border-top: 0.375em double #000;
+  border-bottom: 0.125em solid #000;
+}
+.main-nav ul li {
+  display: inline-block;
+  margin: 14px;
+}
+.main-nav a {
+  font-family: "AvenirNext-DemiBold", sans-serif;
+}
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero h1 {
+  color: #2b292d;
+}
+.hero__desc {
+  width: 400px;
+  padding: 40px;
+}
+.hero__desc p {
+  text-align: justify;
+  line-height: 30px;
+  width: 81%;
+}
+.hero__image {
+  position: relative;
+  bottom: 20px;
+}
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+.meetYourMatch.container {
+  display: flex;
+  align-items: center;
+}
+.meetYourMatch__background {
+  background: #eef0fc;
+  width: 90%;
+  height: 390px;
+  position: absolute;
+  z-index: -1;
+  border-radius: 18px;
+  left: 50px;
+}
+input#dog,
+#cat {
+  display: none;
+}
+.switcher {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 15px;
+}
+.switcher span {
+  padding: 20px;
+}
+.meetYourMatchــform {
+  align-items: center;
+  padding: 20px;
+}
+.meetYourMatchــcontent {
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+.meetYourMatchــform .button {
+  margin-left: -15%;
+  border: 1px solid #3040c4;
+  min-width: 185px;
+}
+input {
+  border: 1px solid #3040c4;
+  height: 56px;
+  min-width: 400px;
+  border-radius: 40px;
+  font-family: "AvenirNext-Regular", sans-serif;
+}
+.form-group {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+/* https://css-tricks.com/almanac/selectors/p/placeholder/ */
+input::placeholder {
+  padding-left: 40px;
+  color: rgba(48, 64, 196, 0.5);
+  background-image: url(../images/map-pin.png);
+  background-repeat: no-repeat;
+  background-position-x: 10px;
+}
+.widgets.is-searchResults {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  align-content: center;
+  justify-content: space-between;
+}
+.is-searchResults .widget__desc {
+  box-shadow: 0px 76px 172px rgba(205, 213, 228, 0.3);
+}
+.meetYourMatch .container .widget {
+  padding: 20px;
+}
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+section.howItWorks {
+  display: flex;
+}
+.howItWorks .container {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.widgets.is-howItWorks {
+  display: flex;
+}
+.widget__desc p {
+  color: #6a6c79;
+  line-height: 22px;
+}
+.howItWorks .widget {
+  align-items: center;
+  width: 23%;
+  line-height: 22px;
+  padding: 30px;
+  margin: 30px;
+}
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+section.stories {
+  display: flex;
+}
+.stories .container {
+  background-color: #f6f6f9;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+p.heading-paragraph {
+  color: #5f5f80;
+  text-align: center;
+  width: 37%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.stories .container .widgets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.stories .container .widget {
+  padding: 10px;
+  text-align: left;
+}
+.stories .widget h3 {
+  font-family: "AvenirNext-Regular", sans-serif;
+}
+.stories .widget a {
+  color: #2329db;
+  font-weight: 900;
+}
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+.actions {
+  background-color: #3040c4;
+  /* height: 250px; */
+  text-align: center;
+}
+.actions .container {
+  padding: 47px 0;
+}
+.actions .container h2 {
+  color: #ffffff;
+  font-size: 36px;
+}
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.footer-nav {
+  display: flex;
+}
+.copyrights {
+  padding: 50px;
+  margin: 15px 0 0 84px;
+}
+.item {
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  right: 100px;
+  margin: 30px;
+}
+.item h5 {
+  font-family: "AvenirNext-Bold", sans-serif;
+}
+.item ul li {
+  line-height: 30px;
+}
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
+
+@media (min-width: 1024px) {
+}
+
+@media screen and (max-width: 460px) {
+  h2 {
+    text-align: center;
+  }
+  main .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .main-nav {
+    display: none;
+  }
+  header .container {
+    padding: 20px;
+    align-items: unset;
+  }
+  .is-visible-mobile {
+    display: inline-block;
+    background-color: transparent;
+    border: none;
+    top: 10px;
+  }
+  .button.is-primary {
+    padding: 17px 15px;
+  }
+  .meetYourMatchــform .button {
+    margin-left: -134px;
+    min-width: 150px;
+  }
+  .meetYourMatch__background {
+    min-width: 376px;
+    left: 0;
+  }
+  .hero__desc {
+    text-align: justify;
+    padding: 0 20px;
+  }
+  .hero.container.hero__desc h1 {
+    line-height: 40px;
+  }
+  .hero__image img {
+    width: 366px;
+  }
+  #dog,
+  #cat {
+    display: none;
+  }
+  .form-group input {
+    min-width: 318px;
+    height: 50px;
+  }
+  .meetYourMatchــform {
+    align-content: center;
+  }
+  .widgets.is-searchResults {
+    flex-direction: column;
+  }
+  .widgets.is-howItWorks {
+    flex-direction: column;
+  }
+  .howItWorks .widget {
+    width: 63%;
+    text-align: center;
+  }
+  .page .stories {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .stories .container {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .stories .container .widgets {
+    display: flex;
+    flex-direction: column;
+  }
+  .stories .container .widget .widget__image img {
+    width: 100%;
+  }
+  .actions .container {
+    display: flex;
+    justify-content: center;
+  }
+  .actions .container h2 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .actions .button {
+    padding: 20px 34px;
+    margin: 5px;
+    min-width: 155px;
+  }
+  footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .copyrights {
+    margin: 22px;
+    padding: 0;
+  }
+  .footer-nav {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .footer-nav .item {
+    margin: 33px;
+    padding: 0;
+    position: unset;
+    flex: 1;
+    flex-direction: column;
+  }
+}
