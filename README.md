@@ -1,7 +1,7 @@
 # <div dir="rtl"> مشروع بناء موقع إلكتروني</div>
 <div dir="rtl">
 
-[الموقع](https://hungry-villani-f53ee3.netlify.com/?animal_type=on#)
+[الموقع](https://prettypets.netlify.com/)
 </div>
 
 ## <div dir="rtl"> عن المشروع</div>
