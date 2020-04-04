@@ -6,7 +6,7 @@
 
 ## <div dir="rtl"> عن المشروع</div>
 
-![demo image](https://github.com/barmej/Fullsatck-Project-1/blob/master/images/demo.png)
+![demo image](https://github.com/3bdullelah/Project-barmej-full-stack/blob/master/images/desktop.jpg)
 
 ### <div dir="rtl"> نبذة عن المشروع:</div>
 
